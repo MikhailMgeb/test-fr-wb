@@ -1,20 +1,20 @@
 import React, { ChangeEvent, FC } from 'react';
 
 import { cnSelect } from './Select.classname';
-import { selectOption, valueSelect } from '../../types';
+import { SelectOption, ValueSelect } from '../../types';
 
 type SelectProps = {
-    usedValue?: valueSelect | undefined,
-    options: selectOption;
+    usedValue?: ValueSelect | undefined,
+    options: SelectOption;
     placeholder: string;
     disabled?: boolean;
-    onChange: (arg: valueSelect) => void;
+    onChange: (arg: ValueSelect) => void;
 }
 
 const Select: FC<SelectProps> = ({ options, placeholder, disabled, usedValue, onChange }) => {
 
     const handleChangeValue = (event: ChangeEvent<HTMLSelectElement>) => {
-        const value: valueSelect = event.target.value as valueSelect;
+        const value: ValueSelect = event.target.value as ValueSelect;
 
         if (onChange) {
             onChange(value);
