@@ -4,7 +4,7 @@ import { cnSelect } from './Select.classname';
 import { SelectOption, ValueSelect } from '../../types';
 
 type SelectProps = {
-    usedValue?: ValueSelect | undefined,
+    usedValue?: ValueSelect | undefined;
     options: SelectOption;
     placeholder: string;
     disabled?: boolean;

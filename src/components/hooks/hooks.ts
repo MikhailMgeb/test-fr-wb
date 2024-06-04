@@ -9,7 +9,7 @@ export const useFetch = (url: string | null) => {
     useEffect(() => {
 
         if (url === null) {
-            return
+            return;
         }
 
         const fetchData = async () => {
@@ -18,7 +18,7 @@ export const useFetch = (url: string | null) => {
                 const response = await fetch(url);
 
                 if (!response.ok) {
-                    throw new Error(response.statusText)
+                    throw new Error(response.statusText);
                 };
 
                 const json = await response.json();
